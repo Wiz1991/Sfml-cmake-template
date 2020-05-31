@@ -15,7 +15,7 @@ void App::run(){
 
     while(mWindow.isOpen()){
         sf::Time dt = clock.restart();
-        timeSinceLastUpdate+=timePerFrame;
+        timeSinceLastUpdate+=dt;
         while(timeSinceLastUpdate > timePerFrame){
             timeSinceLastUpdate-=timePerFrame;
             handleEvents();
